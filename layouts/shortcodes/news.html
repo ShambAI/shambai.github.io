@@ -1,0 +1,439 @@
+<style>
+    .news-container {
+      display: block;
+      margin: 0 auto;  /* This centers the container */
+      border: 2px solid var(--color-primary-500);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      background: rgba(128, 128, 128, 0.08);
+      overflow-x: auto;
+    }
+  
+    /* Mobile: fixed at 400px */
+    @media (max-width: 600px) {
+      .news-container {
+        width: 400px;
+        max-width: 400px;
+        min-width: 400px;
+        padding: 1rem;
+        margin: 0 auto;  /* Center it */
+      }
+      .news-tabs {
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+        justify-content: center;  /* Center the buttons */
+      }
+      .news-tabs button {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.70rem;
+        min-width: 2.5rem;
+      }
+      .news-item {
+        gap: 0.5rem;
+      }
+      .news-date {
+        min-width: 4rem;
+        font-size: 0.7rem;
+      }
+      .news-text {
+        font-size: 0.8rem;
+      }
+      
+    }
+  
+    /* Tablet: fixed at 600px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .news-container {
+        width: 600px;
+        max-width: 600px;
+        min-width: 600px;
+        padding: 1.2rem;
+        margin: 0 auto;  /* Center it */
+      }
+      .news-tabs {
+        gap: 0.5rem;
+        margin-bottom: 1.2rem;
+        justify-content: center;  /* Center the buttons */
+      }
+      .news-tabs button {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+        min-width: 4.5rem;
+      }
+      .news-item {
+        gap: 0.8rem;
+      }
+      .news-date {
+        min-width: 5rem;
+        font-size: 0.8rem;
+      }
+      .news-text {
+        font-size: 0.9rem;
+      }
+      
+    }
+  
+    /* Desktop: fixed at 800px */
+    @media (min-width: 1025px) {
+      .news-container {
+        width: 800px;
+        max-width: 800px;
+        min-width: 800px;
+        padding: 1.5rem;
+        margin: 0 auto;  /* Center it */
+      }
+      .news-tabs {
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        justify-content: center;  /* Center the buttons */
+      }
+      .news-tabs button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.95rem;
+        min-width: 5rem;
+      }
+      .news-item {
+        gap: 1rem;
+      }
+      .news-date {
+        min-width: 6rem;
+        font-size: 0.85rem;
+      }
+      .news-text {
+        font-size: 0.95rem;
+      }
+      
+    }
+  
+    .news-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 2.5rem;
+      align-items: center;
+      justify-content: center;  /* Center the buttons by default */
+      gap: 0.5rem;  /* Added default gap */
+    }
+  
+    .news-tabs button {
+      border: 2px solid var(--color-primary-500);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--color-primary-500);
+      cursor: pointer;
+      font-weight: 600;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+  
+    .news-tabs button.active {
+      background: var(--color-primary-500);
+      color: white;
+    }
+  
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+  
+    .news-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.3 !important;
+    }
+  
+    .news-date {
+      color: gray;
+      padding-top: 0.15rem;
+      flex-shrink: 0;
+    }
+  
+    .news-text {
+      word-wrap: break-word;
+    }
+  </style>
+  
+  <div class="news-container">
+  
+    <!-- Year tabs -->
+    <div class="news-tabs">
+        
+      <button id="btn-2021" onclick="showYear('2021')" class="active">
+        2021
+      </button>
+  
+      <button id="btn-2022" onclick="showYear('2022')">
+        2022
+      </button>
+  
+      <button id="btn-2023" onclick="showYear('2023')">
+        2023
+      </button>
+  
+      <button id="btn-2024" onclick="showYear('2024')">
+        2024
+      </button>
+  
+      <button id="btn-2025" onclick="showYear('2025')">
+        2025
+      </button>
+  
+      <button id="btn-2026" onclick="showYear('2026')">
+        2026
+      </button>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2021 -->
+    <!-- ========================= -->
+  
+    <div id="news-2021" class="news-year-panel">
+  
+      <ul class="news-list">
+  
+        <li class="news-item">
+          <span class="news-date">May 2021</span>
+          <span class="news-text">Graduated from CMU with MS degree in Electrical and Computer Engineering</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Aug 2021</span>
+          <span class="news-text">Commenced MS in Marine and Maritime Intelligent Robotics at University of Toulon, France</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Dec 2021</span>
+          <span class="news-text">Completed a semester as a TA in Applied Computer Vision (18-799-RW) at CMU (Remotely)
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2022 -->
+    <!-- ========================= -->
+  
+    <div id="news-2022" class="news-year-panel" style="display: none;">
+  
+      <ul class="news-list">
+  
+        <li class="news-item">
+          <span class="news-date">Jun 2022</span>
+          <span class="news-text">Started summer internship as a computer vision engineer at Alteia, France</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jun 2022</span>
+          <span class="news-text">Presented a poster at MIR Symposium on Bio-inspired & Marine Robotics in Toulon, France</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Aug 2022</span>
+          <span class="news-text">Resume 2nd year Masters in Marine and Maritime Intelligent Robotics at NTNU, Norway</span>
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2023 -->
+    <!-- ========================= -->
+  
+    <div id="news-2023" class="news-year-panel" style="display: none;">
+  
+      <ul class="news-list">
+  
+        <li class="news-item">
+          <span class="news-date">Feb 2023</span>
+          <span class="news-text">Started MS thesis internship with Alteia working on self-supervised learning</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jun 2023</span>
+          <span class="news-text">Graduated with an Erasmus Mundus Joint MS in Marine and Maritime Intelligent Robotics</span>
+        </li>
+        <li class="news-item">
+            <span class="news-date">Jun 2023</span>
+            <span class="news-text">Attended ProbAI summer school in Trondheim, Norway</span>
+        </li>
+
+        <li class="news-item">
+            <span class="news-date">Jun 2023</span>
+            <span class="news-text">Participated in the 2nd annual MIR Symposium and Robotics Championship in Spain</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Sep 2023</span>
+          <span class="news-text">Joined NorwAI as a Doctoral Researcher in AI (PhD at NTNU, Trondheim)</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Oct 2023</span>
+          <span class="news-text">Attended NorwAI Innovate Conference in Trondheim, Norway</span>
+        </li>
+      </ul>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2024 -->
+    <!-- ========================= -->
+  
+    <div id="news-2024" class="news-year-panel" style="display: none;">
+  
+        <ul class="news-list">
+  
+            
+    
+            <li class="news-item">
+                <span class="news-date">Jun 2024</span>
+                <span class="news-text">Participated in the annual MIR Symposium and Robotics Championship in Portugal</span>
+            </li>
+            <li class="news-item">
+                <span class="news-date">Jun 2024</span>
+                <span class="news-text">Attended ProbAI summer school in Copenhagen, Denmark</span>
+            </li>
+    
+            <li class="news-item">
+              <span class="news-date">Oct 2024</span>
+              <span class="news-text">Won best poster award at NorwAI Innovate Conference in Trondheim, Norway</span>
+            </li>
+        </ul>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2025 -->
+    <!-- ========================= -->
+  
+    <div id="news-2025" class="news-year-panel" style="display: none;">
+  
+      <ul class="news-list">
+  
+        <li class="news-item">
+            <span class="news-date">May 2025</span>
+            <span class="news-text">CaTT paper accepted at 28th European Conference on Artificial Intelligence (ECAI 2025)</span>
+        </li>
+        <li class="news-item">
+            <span class="news-date">Jun 2025</span>
+            <span class="news-text">Participated in the annual MIR Symposium and Robotics Championship in Norway</span>
+        </li>
+
+        <li class="news-item">
+           <span class="news-date">Sep 2025</span>
+           <span class="news-text">Passed PhD Mid-term Evaluation</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Oct 2025</span>
+          <span class="news-text">Gave a talk at NorwAI Innovate Conference in Trondheim, Norway</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Oct 2025</span>
+          <span class="news-text">Presented CaTT paper at ECAI 2025 in Bologna, Italy</span>
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+    <!-- ========================= -->
+    <!-- 2026 -->
+    <!-- ========================= -->
+  
+    <div id="news-2026" class="news-year-panel" style="display: none;">
+  
+      <ul class="news-list">
+  
+        <li class="news-item">
+            <span class="news-date">Feb 2026</span>
+            <span class="news-text">Invited speaker at Catch-IDI 2024 on Data Platforms and Streaming Data</span>
+        </li>
+        <li class="news-item">
+            <span class="news-date">Mar 2026</span>
+            <span class="news-text">Presented Contrastive Learning in Time Series at IDI PhD Day Seminar</span>
+        </li>
+
+        <li class="news-item">
+           <span class="news-date">Apr 2026</span>
+           <span class="news-text">Presented Representation Learning in Sensor DATA at NorwAI Forum</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">May 2026</span>
+          <span class="news-text">Gave a talk during NTNU researchers visit to UWaterloo as Part of IWIL AI Program</span>
+        </li>
+
+        <li class="news-item">
+          <span class="news-date">Jul 2026</span>
+          <span class="news-text">Presented Di-COT paper as a poster at ICML 2026 in Seoul, Korea</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jul 2026</span>
+          <span class="news-text">Our ShiFT paper Nominated for the best paper award at ECML PKDD 2026</span>
+        </li>
+        <li class="news-item">
+            <span class="news-date">Sep 2026</span>
+            <span class="news-text">Gave a 12 minutes oral presentation on our ShiFT paper at ECML PKDD 2026, Naples, Italy</span>
+        </li>
+        <li class="news-item">
+            <span class="news-date">Sep 2026</span>
+            <span class="news-text">Invited speaker at the Norwegian Open AI Lab (NAIL) PhD seminar series</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Oct 2026</span>
+          <span class="news-text">Attended the NorwAI Innovate Conference and the MAgnIficent Stories event as part of Trondheim Tech Festival</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Oct 2026</span>
+          <span class="news-text">Spearheaded a session of the Machine Learning Paper Reading Group at the Department of Computer Science (IDI), NTNU</span>
+        </li>
+  
+      </ul>
+  
+    </div>
+  
+  </div>
+  
+  <script>
+    const years = ['2021', '2022', '2023', '2024', '2025', '2026'];
+  
+    function showYear(year) {
+  
+      // Hide all panels and reset all buttons
+      years.forEach(function (y) {
+  
+        const panel = document.getElementById('news-' + y);
+        const button = document.getElementById('btn-' + y);
+  
+        if (panel) {
+          panel.style.display = 'none';
+        }
+  
+        if (button) {
+          button.classList.remove('active');
+        }
+  
+      });
+  
+      // Show selected panel
+      const activePanel = document.getElementById('news-' + year);
+      const activeButton = document.getElementById('btn-' + year);
+  
+      if (activePanel) {
+        activePanel.style.display = 'block';
+      }
+  
+      if (activeButton) {
+        activeButton.classList.add('active');
+      }
+  
+    }
+  </script>

@@ -1,12 +1,12 @@
 ---
 # Display name
-title: Kazeem Shamba
+title: Abdul-Kazeem Shamba
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Kazeem
+first_name: Abdul-Kazeem
 last_name: Shamba
 
 # Pronouns (optional)
@@ -52,6 +52,7 @@ interests:
   - Self-supervised learning
   - Temporal Features/Time Series
   - Robot Learning
+  - Intelligence Agents
   - Swarm Intelligence
 
 education:

@@ -35,12 +35,12 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Kazeem Shamba"
+      text: "Abdul-Kazeem Shamba"
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Kazeem Shamba.'
+    notice: '© {year} Abdul-Kazeem Shamba.'
     license:
       enable: true
       allow_derivatives: false

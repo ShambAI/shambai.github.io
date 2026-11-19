@@ -34,8 +34,11 @@ sections:
       subtitle: ''
       text: |-
         I have reviewed for top-tier conferences in artificial intelligence and machine learning, such as:
+        
         * [International Conference on Learning Representations (ICLR)](https://iclr.cc/)
+
         * [Conference on Neural Information Processing Systems (NeurIPS)](https://neurips.cc/)
+
         * [European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)](https://ecmlpkdd.org/)
 
   - block: resume-languages

@@ -33,8 +33,8 @@ sections:
       title: 'Reviews'
       subtitle: ''
       text: |-
-        I have reviewed for top-tier conferences in artificial intelligence and machine learning, such as:
-        
+        I have reviewed for top-tier conferences in artificial intelligence and machine learning, including:
+
         * [International Conference on Learning Representations (ICLR)](https://iclr.cc/)
 
         * [Conference on Neural Information Processing Systems (NeurIPS)](https://neurips.cc/)
